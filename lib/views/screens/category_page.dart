@@ -52,14 +52,19 @@ class CategoryPage extends StatelessWidget {
                       color: Colors.white,
                       child: Column(
                         children: [
-                          FadeInImage(
+                          Container(
+                            height: 200,
+                            child: FadeInImage(
                               imageErrorBuilder: (context, error, stackTrace) {
                                 return Image.asset("assets/images/load.gif");
                               },
                               placeholder: const AssetImage(
                                 "assets/images/load.gif",
                               ),
-                              image: NetworkImage(category.image)),
+                              image: NetworkImage(category.image),
+                              fit: BoxFit.cover,
+                            ),
+                          ),
                           Text(
                             category.name,
                             textAlign: TextAlign.center,
