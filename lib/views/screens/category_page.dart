@@ -52,7 +52,7 @@ class CategoryPage extends StatelessWidget {
                       color: Colors.white,
                       child: Column(
                         children: [
-                          Container(
+                          SizedBox(
                             height: 200,
                             child: FadeInImage(
                               imageErrorBuilder: (context, error, stackTrace) {
